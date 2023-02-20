@@ -13,7 +13,6 @@ import CustomCard from "./CustomCard";
 const Section = (props) => {
   const { heading, cards } = props;
   const classes = useStyle();
-  debugger;
   return (
     <Box component="div" className={classes.container}>
       <Box component="div" className={classes.heading}>
