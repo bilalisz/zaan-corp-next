@@ -1,3 +1,4 @@
+import React from "react";
 import {
   faBell,
   faCalendar,
@@ -7,10 +8,10 @@ import {
   faPlus,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
+import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, ButtonGroup, Divider, Grid, Stack } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
 import CustomAvatar from "./CustomAvatar";
 import CustomBadge from "./CustomBadge";
 import CustomFortIcon from "./CustomFortIcon";
@@ -23,7 +24,12 @@ const Heading = () => {
       <Grid item md="3" alignSelf="center">
         <Box className={classes.channalUser}>
           <ButtonGroup
-            sx={{ p: 0.4, backgroundColor: "#F0F1F2", borderRadius: 2 }}
+            sx={{
+              px: 0.3,
+              py: 0.5,
+              backgroundColor: "#E7EEF3",
+              borderRadius: 2,
+            }}
           >
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <CustomAvatar
@@ -39,6 +45,13 @@ const Heading = () => {
                 size={35}
               />
               <CustomBadge backgroundColor="#B0A1DF" />
+            </Box>
+            <Box className={classes.arrowCnt}>
+              <FontAwesomeIcon
+                icon={solid("chevron-down")}
+                color="gray"
+                style={{ alignContent: "center" }}
+              />
             </Box>
           </ButtonGroup>
 
@@ -104,6 +117,15 @@ const useStyle = makeStyles((theme) => ({
   },
   channalUser: {
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "space-around",
+  },
+  arrowCnt: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    width: 33,
+    backgroundColor: "#fff",
+    borderRadius: 3,
+    marginLeft: 5,
   },
 }));

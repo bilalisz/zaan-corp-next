@@ -3,6 +3,7 @@ import { Box, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Section from "./components/Section";
 import { getSections } from "@/common/utilities";
+import Scrollbars from "react-custom-scrollbars";
 
 const sectionListing = getSections();
 
@@ -20,10 +21,11 @@ const PageContent = () => {
 export default PageContent;
 const useStyle = makeStyles((theme) => ({
   container: {
-    backgroundColor: "#f7f7f7",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    height: "78vh",
+    height: "80vh",
+    overflow: "hidden",
+    // margin: "20px 0",
   },
 }));

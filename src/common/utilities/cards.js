@@ -70,7 +70,7 @@ const backlog = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faUser,
+    icon: faSearch,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [
@@ -85,10 +85,13 @@ const backlog = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faUser,
+    icon: faSearch,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
-    actions: [{ icon: faBarsStaggered, count: null }],
+    actions: [
+      { icon: faBarsStaggered, count: null },
+      { icon: faMessage, count: 12 },
+    ],
     created: "created 3 days ago",
     author:
       "https://pbs.twimg.com/profile_images/1606259509630042113/C-HLJclD_400x400.jpg",

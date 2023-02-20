@@ -2,6 +2,7 @@ const { makeStyles } = require("@mui/styles");
 
 export const useSideMenuStyles = makeStyles((theme) => ({
   container: {
+    width: "16%",
     "& .MuiListItem-root": {
       paddingTop: 0,
       paddingButtom: 0,
@@ -23,8 +24,8 @@ export const useSideMenuStyles = makeStyles((theme) => ({
   drawer: {
     // width: 250,
     "& .MuiDrawer-paper": {
-      boxSizing: "border-box",
-      width: 257,
+      // boxSizing: "border-box",
+      width: "15%",
       // [theme.breakpoints.up("md")]: {
       //   width: 300,
       // },

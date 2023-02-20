@@ -2,12 +2,14 @@ import {
   faArrowDownWideShort,
   faBarsProgress,
   faBarsStaggered,
+  faEllipsis,
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import React from "react";
+import Scrollbars from "react-custom-scrollbars";
 import CustomCard from "./CustomCard";
 
 const Section = (props) => {
@@ -15,17 +17,21 @@ const Section = (props) => {
   const classes = useStyle();
   return (
     <Box component="div" className={classes.container}>
-      <Box component="div" className={classes.heading}>
-        <Typography variant="h6">{heading}</Typography>
-        <Typography sx={{ color: "GrayText", fontSize: 13 }}>(3)</Typography>
-        <FontAwesomeIcon
-          icon={faBarsStaggered}
-          size="xs"
-          color="gray"
-          style={{ margin: "0px 5px" }}
-        />
-        <FontAwesomeIcon icon={faArrowDownWideShort} size="xs" color="gray" />
+      <Box className={classes.headingWrapper}>
+        <Box component="div" className={classes.heading}>
+          <Typography variant="h6">{heading}</Typography>
+          <Typography sx={{ color: "GrayText", fontSize: 13 }}>(3)</Typography>
+          <FontAwesomeIcon
+            icon={faBarsStaggered}
+            size="xs"
+            color="gray"
+            style={{ margin: "0px 5px" }}
+          />
+          <FontAwesomeIcon icon={faArrowDownWideShort} size="xs" color="gray" />
+        </Box>
+        <FontAwesomeIcon icon={faEllipsis} size="xs" color="gray" />
       </Box>
+      {/* <Scrollbars> */}
       <Box>
         {cards?.map((card) => (
           <CustomCard card={card} key={card.id} />
@@ -41,6 +47,7 @@ const Section = (props) => {
           <Typography variant="h6">Add Card</Typography>
         </Button>
       )}
+      {/* </Scrollbars> */}
     </Box>
   );
 };
@@ -49,13 +56,19 @@ export default Section;
 
 const useStyle = makeStyles((theme) => ({
   container: {
-    height: 550,
+    height: "90%",
     overflow: "auto",
     flex: 1,
     margin: "15px 10px",
     background: "#EFF2F5",
     borderRadius: 10,
     padding: 10,
+    // overflow: "hidden",
+  },
+  headingWrapper: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
   heading: {
     display: "flex",
@@ -81,5 +94,10 @@ const useStyle = makeStyles((theme) => ({
       fontWeight: 500,
       marginLeft: 5,
     },
+  },
+  scrollbar: {
+    height: "78vh !important",
+    padding: "10px 0px",
+    max: 800,
   },
 }));

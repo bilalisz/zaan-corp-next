@@ -47,6 +47,7 @@ const PageHeader = () => {
               <CustomFortIcon
                 bgColor="#BABBC1"
                 borderRadius="50%"
+                sx={{ fontSize: "larger", backgroundColor: "#b8babc" }}
                 iconProps={{
                   icon: faCode,
                   color: "#444344",
