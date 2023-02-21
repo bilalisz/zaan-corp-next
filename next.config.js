@@ -1,12 +1,21 @@
 /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   experimental: {
+//     appDir: true,
+//   },
+// };
+
+// module.exports = {
+//   experimental: {
+//     appDir: true,
+//   },
+// };
 const nextConfig = {
-  experimental: {
-    appDir: true,
+  images: {
+    loader: "akamai",
+    path: "",
   },
+  assetPrefix: "./",
 };
 
-module.exports = {
-  experimental: {
-    appDir: true,
-  },
-};
+export default nextConfig;
