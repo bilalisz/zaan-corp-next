@@ -8,7 +8,24 @@ export default function Home() {
     setShowChild(true);
   }, []);
   if (!showChild) {
-    return null;
+    return (
+      <main
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+        }}
+      >
+        <h4
+          style={{
+            color: "gray",
+          }}
+        >
+          Loading...!
+        </h4>
+      </main>
+    );
   }
 
   if (typeof window === "undefined") {

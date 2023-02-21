@@ -16,7 +16,11 @@ const CustomCard = ({ card }) => {
     <Box component="div" className={classes.container}>
       <Box component="div" className={classes.title}>
         <Box component="span" sx={{ display: "flex", alignItems: "center" }}>
-          <FontAwesomeIcon icon={faCircle} size="xs" color={card.circleColor} />
+          <FontAwesomeIcon
+            icon={faCircle}
+            className={classes.circleColor}
+            color={card.circleColor}
+          />
           <Typography
             variant="body2"
             sx={{ mb: 0, ml: 1, fontSize: 12, fontWeight: 600, color: "gray" }}
@@ -39,6 +43,7 @@ const CustomCard = ({ card }) => {
       <Stack direction="row" spacing={0.2} className={classes.chipWrapper}>
         {card.tags.map((tag) => (
           <Chip
+            key={tag.id}
             label={
               <Typography variant="body1" sx={{ fontSize: 12 }}>
                 {tag}
@@ -48,8 +53,9 @@ const CustomCard = ({ card }) => {
         ))}
       </Stack>
       <Stack direction="row" spacing={1} className={classes.actionWrapper}>
-        {card.actions.map((action) => (
+        {card.actions.map((action, i) => (
           <Box
+            key={i}
             component="span"
             sx={{ display: "flex", alignItems: "center", m: 0.4 }}
           >
@@ -129,9 +135,10 @@ const useStyle = makeStyles((theme) => ({
   trashIcon: {
     color: "#CD171E",
     fontSize: 12,
-    // padding: 5,
-    // borderRadius: "50%",
-    // backgroundColor: "#d6d6d6",
+    cursor: "pointer",
+  },
+  circleColor: {
+    fontSize: 9,
     cursor: "pointer",
   },
 }));

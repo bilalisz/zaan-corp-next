@@ -12,7 +12,7 @@ const PageContent = () => {
   return (
     <Box component="div" className={classes.container}>
       {sectionListing.map((list) => (
-        <Section heading={list.heading} cards={list.cards} />
+        <Section key={list.id} heading={list.heading} cards={list.cards} />
       ))}
     </Box>
   );

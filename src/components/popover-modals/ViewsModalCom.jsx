@@ -29,7 +29,7 @@ const ViewsModalCom = () => {
       <Box component="div" className={classes.content}>
         <List component="nav" aria-label="secondary mailbox folder">
           {viewsData.map((list) => (
-            <Box className={classes.listBtn}>
+            <Box className={classes.listBtn} key={list.id}>
               <ListItemButton key={list.id}>
                 <Box className={classes.listingItem}>
                   <FontAwesomeIcon
