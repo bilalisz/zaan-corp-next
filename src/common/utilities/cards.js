@@ -1,10 +1,9 @@
 import { v4 as uuidv4 } from "uuid";
-import { faMessage, faUser } from "@fortawesome/free-regular-svg-icons";
+import { faMessage, faTrashAlt } from "@fortawesome/free-regular-svg-icons";
 import {
   faBarsStaggered,
   faLink,
   faListCheck,
-  faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 
 const getUID = () => {
@@ -16,7 +15,7 @@ const todos = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faUser,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [
@@ -33,7 +32,7 @@ const todos = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faUser,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [
@@ -50,7 +49,7 @@ const todos = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faUser,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [
@@ -70,7 +69,7 @@ const backlog = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faSearch,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [
@@ -85,7 +84,7 @@ const backlog = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faSearch,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [
@@ -100,7 +99,7 @@ const backlog = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faSearch,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [
@@ -118,7 +117,7 @@ const InProgress = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faUser,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [{ icon: faBarsStaggered, count: null }],
@@ -130,7 +129,7 @@ const InProgress = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faUser,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [{ icon: faBarsStaggered, count: null }],
@@ -142,7 +141,7 @@ const InProgress = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faUser,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [{ icon: faBarsStaggered, count: null }],
@@ -157,7 +156,7 @@ const inReviews = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faUser,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [{ icon: faBarsStaggered, count: null }],
@@ -169,7 +168,7 @@ const inReviews = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faUser,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [{ icon: faBarsStaggered, count: null }],
@@ -181,7 +180,7 @@ const inReviews = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faUser,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [{ icon: faBarsStaggered, count: null }],
@@ -196,7 +195,7 @@ const completed = [
     id: getUID(),
     title: "ContactRM",
     circleColor: "#FF3477",
-    icon: faUser,
+    icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
     actions: [{ icon: faBarsStaggered, count: null }],
@@ -208,7 +207,7 @@ const completed = [
   //     id: getUID(),
   //     title: "ContactRM",
   //     circleColor: "#FF3477",
-  //     icon: faUser,
+  //     icon: faTrashAlt,
   //     content: "Design a website",
   //     tags: ["api.agentbook.com", "api.contactrm"],
   //     actions: [{ icon: faBarsStaggered, count: null }],
@@ -220,7 +219,7 @@ const completed = [
   //     id: getUID(),
   //     title: "ContactRM",
   //     circleColor: "#FF3477",
-  //     icon: faUser,
+  //     icon: faTrashAlt,
   //     content: "Design a website",
   //     tags: ["api.agentbook.com", "api.contactrm"],
   //     actions: [{ icon: faBarsStaggered, count: null }],

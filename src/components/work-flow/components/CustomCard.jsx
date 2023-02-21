@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Chip, Stack, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import CustomAvatar from "@/components/CustomAvatar";
+import DeleteCardModal from "./DeleteCardModal";
 
 const CustomCard = ({ card }) => {
   const classes = useStyle();
+  const [openDelModal, setOpenDelModal] = useState(false);
+
+  const handleClose = () => setOpenDelModal(false);
 
   return (
     <Box component="div" className={classes.container}>
@@ -20,7 +24,11 @@ const CustomCard = ({ card }) => {
             {card.title}
           </Typography>
         </Box>
-        <FontAwesomeIcon icon={card.icon} size="x" />
+        <FontAwesomeIcon
+          icon={card.icon}
+          className={classes.trashIcon}
+          onClick={() => setOpenDelModal(true)}
+        />
       </Box>
       <Typography
         variant="body2"
@@ -67,6 +75,9 @@ const CustomCard = ({ card }) => {
         />
         <CustomAvatar size={25} src={card.author} />
       </Box>
+      {openDelModal && (
+        <DeleteCardModal open={openDelModal} onClose={handleClose} />
+      )}
     </Box>
   );
 };
@@ -114,5 +125,13 @@ const useStyle = makeStyles((theme) => ({
       paddingLeft: 6,
       paddingRight: 6,
     },
+  },
+  trashIcon: {
+    color: "#CD171E",
+    fontSize: 12,
+    // padding: 5,
+    // borderRadius: "50%",
+    // backgroundColor: "#d6d6d6",
+    cursor: "pointer",
   },
 }));

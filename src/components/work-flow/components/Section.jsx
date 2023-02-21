@@ -1,6 +1,6 @@
+import React, { useState } from "react";
 import {
   faArrowDownWideShort,
-  faBarsProgress,
   faBarsStaggered,
   faEllipsis,
   faPlus,
@@ -8,13 +8,14 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import React from "react";
 import Scrollbars from "react-custom-scrollbars";
 import CustomCard from "./CustomCard";
+import AddCard from "../../AddCard";
 
 const Section = (props) => {
   const { heading, cards } = props;
   const classes = useStyle();
+  const [addComp, setAddComp] = useState("");
   return (
     <Box component="div" className={classes.container}>
       <Box className={classes.headingWrapper}>
@@ -37,15 +38,22 @@ const Section = (props) => {
           <CustomCard card={card} key={card.id} />
         ))}
       </Box>
-      {heading != "Compeleted" && (
-        <Button
-          variant="outlined"
-          sx={{ mt: 1 }}
-          className={classes.addCardCnt}
-        >
-          <FontAwesomeIcon icon={faPlus} color="#0E8CFF" />
-          <Typography variant="h6">Add Card</Typography>
-        </Button>
+      {addComp.section ? (
+        <AddCard />
+      ) : (
+        heading != "Compeleted" && (
+          <Button
+            variant="outlined"
+            sx={{ mt: 1 }}
+            className={classes.addCardCnt}
+            onClick={() => {
+              setAddComp(heading);
+            }}
+          >
+            <FontAwesomeIcon icon={faPlus} color="#0E8CFF" />
+            <Typography variant="h6">Add Card</Typography>
+          </Button>
+        )
       )}
       {/* </Scrollbars> */}
     </Box>
