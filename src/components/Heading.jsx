@@ -2,13 +2,13 @@ import React from "react";
 import {
   faBell,
   faCalendar,
+  faChevronDown,
   faCommentDots,
   faLightbulb,
   faMessage,
   faPlus,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Box, ButtonGroup, Divider, Grid, Stack } from "@mui/material";
 import { makeStyles } from "@mui/styles";
@@ -48,7 +48,7 @@ const Heading = () => {
             </Box>
             <Box className={classes.arrowCnt}>
               <FontAwesomeIcon
-                icon={solid("chevron-down")}
+                icon={faChevronDown}
                 color="gray"
                 style={{ alignContent: "center" }}
               />

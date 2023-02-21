@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { solid } from "@fortawesome/fontawesome-svg-core/import.macro";
 import {
   Box,
   Divider,
@@ -15,6 +14,7 @@ import {
 import { company, getSideMenuList } from "../../common/data/sidemenu";
 import { useSideMenuStyles } from "./styles";
 import CustomIcon from "@/components/CustomIcon";
+import { faChevronDown, faCircle } from "@fortawesome/free-solid-svg-icons";
 
 const SideMenuList = getSideMenuList();
 const SideMenu = () => {
@@ -27,11 +27,11 @@ const SideMenu = () => {
           <Toolbar>
             <Box sx={{ display: "flex", alignItems: "center" }}>
               {/* <Circle size="x" color={theme.palette.background.lightGreen1} /> */}
-              <FontAwesomeIcon icon={solid("circle")} color="#27E1BF" />
+              <FontAwesomeIcon icon={faCircle} color="#27E1BF" />
               <Box className={classes.heading}>
                 <Typography variant="h5">Zaan-Corp</Typography>
 
-                <FontAwesomeIcon icon={solid("chevron-down")} color="gray" />
+                <FontAwesomeIcon icon={faChevronDown} color="gray" />
               </Box>
             </Box>
           </Toolbar>
