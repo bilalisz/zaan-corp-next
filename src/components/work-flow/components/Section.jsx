@@ -64,14 +64,14 @@ export default Section;
 
 const useStyle = makeStyles((theme) => ({
   container: {
-    height: "90%",
+    height: "95%",
     overflow: "auto",
     flex: 1,
     margin: "15px 10px",
     background: "#EFF2F5",
     borderRadius: 10,
     padding: 10,
-    // overflow: "hidden",
+    boxShadow: "rgba(0, 0, 0, 0.05) 0px 0px 0px 1px",
   },
   headingWrapper: {
     display: "flex",

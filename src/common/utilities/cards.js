@@ -31,7 +31,7 @@ const todos = [
   {
     id: getUID(),
     title: "ContactRM",
-    circleColor: "#FF3477",
+    circleColor: "#1D2F6F",
     icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
@@ -48,7 +48,7 @@ const todos = [
   {
     id: getUID(),
     title: "ContactRM",
-    circleColor: "#FF3477",
+    circleColor: "#2A9D8F",
     icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
@@ -98,7 +98,7 @@ const backlog = [
   {
     id: getUID(),
     title: "ContactRM",
-    circleColor: "#FF3477",
+    circleColor: "#168AAD",
     icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
@@ -140,7 +140,7 @@ const InProgress = [
   {
     id: getUID(),
     title: "ContactRM",
-    circleColor: "#FF3477",
+    circleColor: "#264653",
     icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
@@ -179,7 +179,7 @@ const inReviews = [
   {
     id: getUID(),
     title: "ContactRM",
-    circleColor: "#FF3477",
+    circleColor: "#005F73",
     icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],
@@ -194,7 +194,7 @@ const completed = [
   {
     id: getUID(),
     title: "ContactRM",
-    circleColor: "#FF3477",
+    circleColor: "#588157",
     icon: faTrashAlt,
     content: "Design a website",
     tags: ["api.agentbook.com", "api.contactrm"],

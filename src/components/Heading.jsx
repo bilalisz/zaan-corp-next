@@ -33,7 +33,7 @@ const Heading = () => {
           >
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <CustomAvatar
-                src="https://pbs.twimg.com/profile_images/1606259509630042113/C-HLJclD_400x400.jpg"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                 size={35}
               />
               <CustomBadge backgroundColor="#FAAD14" />
@@ -41,7 +41,7 @@ const Heading = () => {
             <Divider orientation="vertical" component="hr" sx={{ mx: 1 }} />
             <Box sx={{ display: "flex", alignItems: "center" }}>
               <CustomAvatar
-                src="https://pbs.twimg.com/profile_images/1606259509630042113/C-HLJclD_400x400.jpg"
+                src="https://media.istockphoto.com/id/1364388471/photo/multiracial-male-principal-standing-outdoors-on-campus.jpg?s=612x612&w=is&k=20&c=2bBmB_D644C5jPQ1BQPdf7-w-1pfY_-5ZvsdwdJqZxg="
                 size={35}
               />
               <CustomBadge backgroundColor="#B0A1DF" />

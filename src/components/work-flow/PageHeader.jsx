@@ -12,7 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import CustomAvatar from "../CustomAvatar";
 import CustomPopOver from "../popover-modals";
-import { FILTER, PIN, SORT, VIEWS } from "@/common/constants";
+import { FILTER, PIN, SORT, userImg, VIEWS } from "@/common/constants";
 import { faFloppyDisk } from "@fortawesome/free-regular-svg-icons";
 
 const PageHeader = () => {
@@ -72,10 +72,9 @@ const PageHeader = () => {
               sx={{ ml: 1.5, height: 30 }}
             />
             <Stack direction="row" spacing={0.5} sx={{ ml: 1 }}>
-              <CustomAvatar size={30} />
-              <CustomAvatar size={30} />
-              <CustomAvatar size={30} />
-              <CustomAvatar size={30} />
+              {userImg.map((img) => (
+                <CustomAvatar size={30} src={img} />
+              ))}
             </Stack>
           </Box>
         </Grid>
