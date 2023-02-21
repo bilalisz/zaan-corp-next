@@ -19,7 +19,7 @@ const PinModalCom = ({ title }) => {
       </Box>
       <Box component="div" sx={{ backgroundColor: "#EFF2F5", p: 1, py: 1 }}>
         {[...pinnedCards, pinnedCards[0]]?.map((card) => (
-          <CustomCard card={card} />
+          <CustomCard card={card} key={card.id} />
         ))}
       </Box>
     </Box>

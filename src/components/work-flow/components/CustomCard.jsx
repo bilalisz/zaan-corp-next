@@ -43,6 +43,7 @@ const CustomCard = ({ card }) => {
       <Stack direction="row" spacing={0.2} className={classes.chipWrapper}>
         {card.tags.map((tag) => (
           <Chip
+            key={tag.id}
             label={
               <Typography variant="body1" sx={{ fontSize: 12 }}>
                 {tag}
@@ -52,8 +53,9 @@ const CustomCard = ({ card }) => {
         ))}
       </Stack>
       <Stack direction="row" spacing={1} className={classes.actionWrapper}>
-        {card.actions.map((action) => (
+        {card.actions.map((action, i) => (
           <Box
+            key={i}
             component="span"
             sx={{ display: "flex", alignItems: "center", m: 0.4 }}
           >

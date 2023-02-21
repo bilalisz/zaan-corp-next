@@ -72,8 +72,8 @@ const PageHeader = () => {
               sx={{ ml: 1.5, height: 30 }}
             />
             <Stack direction="row" spacing={0.5} sx={{ ml: 1 }}>
-              {userImg.map((img) => (
-                <CustomAvatar size={30} src={img} />
+              {userImg.map((img, i) => (
+                <CustomAvatar size={30} src={img} key={i} />
               ))}
             </Stack>
           </Box>
